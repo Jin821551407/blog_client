@@ -5,6 +5,8 @@
   "scripts": {
     "dev": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service serve",
     "build": "SET NODE_OPTIONS=--openssl-legacy-provider && vue-cli-service build",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d dist",
     "lint": "vue-cli-service lint",
     "test:Avatar": "vue serve ./src/components/Avatar/test.vue",
     "test:Pager": "vue serve ./src/components/Pager/test.vue",
@@ -36,6 +38,7 @@
     "babel-eslint": "^10.1.0",
     "eslint": "^6.7.2",
     "eslint-plugin-vue": "^6.2.2",
+    "gh-pages": "^6.1.0",
     "less": "^4.1.2",
     "less-loader": "^7.3.0",
     "vue-template-compiler": "^2.6.11",
